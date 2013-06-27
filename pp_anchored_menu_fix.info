@@ -1,0 +1,6 @@
+; $Id$
+package = Piratenpartei
+name = Piratenpartei Anchored Menu Fix
+description = Korrigiert den Active Trail von Menus mit Anchor Links
+core = 6.x
+version = "6.x-1.0"

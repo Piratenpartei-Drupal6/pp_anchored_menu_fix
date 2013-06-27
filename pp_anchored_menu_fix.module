@@ -1,0 +1,45 @@
+<?php
+
+/**
+*
+*/
+function pp_anchored_menu_fix_init() {
+	// path
+		$path = drupal_get_path('module', 'pp_anchored_menu_fix');
+
+	// add JS
+		drupal_add_js($path.'/libs/purl.js');
+		drupal_add_js($path.'/libs/jquery.ba-hashchange.js');
+		drupal_add_js($path.'/pp_anchored_menu_fix.js');
+}
+
+
+/**
+* Display help and module information.
+* @param path
+*   Which path of the site we're displaying help.
+* @param arg
+*   Array that holds the current path as would be returned from arg() function.
+* @return
+*   help text for the path.
+*/
+function pp_anchored_menu_fix_help($path, $arg) {
+  $output = '';
+  switch ($path) {
+    case "admin/help#pp_anchored_menu_fix":
+      $output = '<p>'. t("Fügt das notwendige Javascript in den Header ein.").'</p>';
+      break;
+  }
+  return $output;
+} // function pp_newsletter_help
+
+
+/**
+* Valid permissions for this module
+* @return array An array of valid permissions for the pp_newsletter module
+*/
+#function pp_anchored_menu_fix_perm() {
+#  return array('administer pp_anchored_menu_fix');
+#} // function pp_newsletter_perm()
+
+?>
